@@ -13,9 +13,9 @@
         </div>
         <div class="card-footer">
           <span class="small">Created:</span>
-          <span class="badge badge-info mr-5">{{blog.date}}</span>
+          <span class="badge badge-info mr-5">{{blog.date | formatDate}}</span>
           <span class="small">Modified:</span>
-          <span class="badge badge-success">{{blog.modified}}</span>
+          <span class="badge badge-success">{{blog.modified | formatDate}}</span>
         </div>
       </div>
     </div>

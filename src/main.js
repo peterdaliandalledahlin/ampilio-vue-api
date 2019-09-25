@@ -1,8 +1,15 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
+import moment from 'moment'
 
 Vue.config.productionTip = false;
+
+Vue.filter('formatDate', function(value) {
+  if (value) {
+    return moment(String(value)).format('YYYY-MM-DD hh:mm')
+  }
+});
 
 Vue.filter('striphtml', function (value) {
   var div = document.createElement("div");
@@ -14,10 +21,6 @@ Vue.filter('striphtml', function (value) {
 Vue.filter('toUppercase', (value) => {
   return value.toUpperCase();
 });
-
-// Vue.filter('snippet', (value) => {
-//   return value.slice(1,1000)+'...';
-// })
 
 new Vue({
   router,
