@@ -2,6 +2,9 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import moment from 'moment'
+import ReadMore from 'vue-read-more';
+ 
+Vue.use(ReadMore);
 
 Vue.config.productionTip = false;
 

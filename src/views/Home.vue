@@ -9,7 +9,9 @@
       <div class="card text-left">
         <div class="card-body wrapper">
           <h5 class="card-title">{{blog.title.rendered | toUppercase}}</h5>
-          <p class="card-text small">{{blog.content.rendered | striphtml}}</p>
+          <!-- <p class="card-text small">{{blog.content.rendered | striphtml}}</p> -->
+          <p class="card-text small"><read-more  more-str="visa mer" :text="blog.content.rendered | striphtml" link="#" less-str="visa mindre" :max-chars="200"></read-more></p>
+          
         </div>
         <div class="card-footer">
           <span class="small">Created:</span>
